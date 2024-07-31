@@ -22,10 +22,11 @@ info 메서드는 "저의 이름은 [name] 나이는 [age] 입니다." 를 출�
 4. student1이라는 인스턴스를 생성하고, 이름은 "준현" 나이는 12000 , study는 javascript로 생성하고 각 요소들을 출력해주세요
 
 
-5. Student 클래스에서 info 메서드를 오버라이드해서 "저의 이름은 [name] 나이는 [age] 현재 [study]를 학습하고 있습니다" 라는 메시지를 출력하게 만들어주고, 인스턴스는 student1이라고 만들어주세요
+5. Tutee 클래스를 만들어주세요 Tutee는 Person을 상속받습니다.  
+info 메서드를 오버라이드해서 "저의 이름은 [name] 나이는 [age] 현재 [study]를 학습하고 있습니다" 라는 메시지를 출력하게 만들어주고, 인스턴스는 tutee이라고 만들어주세요.
 
 
-6. Student 클래스가 Person 클래스의 하위 클래스인 확인하고,student1 인스턴스가 Studnet 클래스의 인스턴스인지 확인하여 출력해보세요.
+6. Student 클래스가 Person 클래스의 하위 클래스인 확인하고, tutee 인스턴스가 Studnet 클래스의 인스턴스인지 확인하여 출력해보세요.
 
 ```
 
@@ -100,11 +101,11 @@ console.log( < 빈칸 > ) ; //  출력값 20
 2. 웹 브라우저에서 setTimeout 함수 내에서 this가 가리키는 출력값이 왜 그런지 설명해주세요
 const obj2 ={
     method : function(){
-        console.log(`aaa : `,this);
+        console.log('첫번째 this : ',this);
 
         const innerMethod = () =>{
             setTimeout(function(){
-                console.log(this); 
+                console.log('두번째 this : ' , this); 
             });
         }
         innerMethod();
